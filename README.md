@@ -1,6 +1,6 @@
 # Plane wave scattering by a sphere
 
-Computes the electromagnetic fields scattered by a dielectric or metallic sphere using Mie theory. The sphere is illuminated by an x-polarized plane wave propagating in the positive z-direction. The relative permittivity and permeability of the sphere can both specified as complex values. The background medium is vacuum (hardcoded) but can be changed by editing the corresponding permittivity and permeability in *src/main.cpp*.
+Computes the electromagnetic fields scattered by a dielectric or metallic sphere using Mie theory [1,2]. The sphere is illuminated by an x-polarized plane wave propagating in the positive z-direction. The relative permittivity and permeability of the sphere can both specified as complex values. The background medium is vacuum (hardcoded) but can be changed by editing the corresponding permittivity and permeability in *src/main.cpp*. For the case of a perfectly conductive sphere, see the code in [here](https://github.com/kachourim/MieScatteringPEC).
 
 This program may be used to compute the fields scattered by sphere on: 1) a 0D, 1D, 2D and 3D rectangular grid, or 2) on the surface of a sphere of points. It may also be used to compute the absorption, extinction and scattering cross sections as well as the radiation pattern. To perform these operations, refer to the sections below.
 
@@ -73,6 +73,7 @@ R 			| Points sphere radius [m]
 res 		| Points sphere angular resolution [°]
 filename	| Name of output data file
 
+The figure below compares the result obtained from this program to the same one obtained in COMSOL for the parameters `r = 250e-9 m`, `lambda = 1000e-9 m`, `ers = 5 - 2i` and `mrs = -4 - 6i`.
 
 <img src="/images/Sphere.png" width="550">
 
@@ -156,4 +157,9 @@ SEL	|	Description
 1 	| Plot the data only
 2	| Run the computation and plot the data
 
+## References
+
+[1] Bohren, Craig F., and Donald R. Huffman. Absorption and scattering of light by small particles. John Wiley & Sons, 2008.
+
+[2] Paknys, Robert. Applied frequency-domain electromagnetics. John Wiley & Sons, 2016.
 
