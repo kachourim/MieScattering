@@ -48,78 +48,78 @@ int main(int argc, char **argv)
 	// Define parameters
 	// --------------------------------------------------
 	
-	SEL			= int(atof(argv[1]));				// Select computation
+	SEL			= int(atof(argv[1]));			// Select computation
 
 	if (SEL == 1)
 	{						
-		lam0	= atof(argv[2]);   					// Free space wavelength
-		n   	= atof(argv[3]);          			// Number of Mie coefficients
-		r		= atof(argv[4]);         			// Sphere Radius
-		ers_r	= atof(argv[5]);         			// Sphere relative permittivity (real part)
-		ers_i	= atof(argv[6]);         			// Sphere relative permittivity (imag. part)
-		mrs_r	= atof(argv[7]);         			// Sphere relative permeabilitty (real part)
-		mrs_i	= atof(argv[8]);         			// Sphere relative permeabilitty (imag. part)
-		Lx  	= atof(argv[9]);					// Grid length along x
-		Ly  	= atof(argv[10]);					// Grid length along y
-		Lz  	= atof(argv[11]);					// Grid length along z
-		Cx  	= atof(argv[12]);					// Grid center along x
-		Cy  	= atof(argv[13]);					// Grid center along y
-		Cz  	= atof(argv[14]);					// Grid center along z
-		res 	= atof(argv[15]);					// Grid resolution [m]
-		fname 	= argv[16];							// File name
+		lam0	= atof(argv[2]);   				// Free space wavelength
+		n   	= atof(argv[3]);          		// Number of Mie coefficients
+		r		= atof(argv[4]);         		// Sphere Radius
+		ers_r	= atof(argv[5]);         		// Sphere relative permittivity (real part)
+		ers_i	= atof(argv[6]);         		// Sphere relative permittivity (imag. part)
+		mrs_r	= atof(argv[7]);         		// Sphere relative permeabilitty (real part)
+		mrs_i	= atof(argv[8]);         		// Sphere relative permeabilitty (imag. part)
+		Lx  	= atof(argv[9]);				// Grid length along x
+		Ly  	= atof(argv[10]);				// Grid length along y
+		Lz  	= atof(argv[11]);				// Grid length along z
+		Cx  	= atof(argv[12]);				// Grid center along x
+		Cy  	= atof(argv[13]);				// Grid center along y
+		Cz  	= atof(argv[14]);				// Grid center along z
+		res 	= atof(argv[15]);				// Grid resolution [m]
+		fname 	= argv[16];						// File name
 	}
 	else if (SEL == 2)
 	{
-		lam0	= atof(argv[2]);   					// Free space wavelength
-		n   	= atof(argv[3]);          			// Number of Mie coefficients
-		r		= atof(argv[4]);         			// Sphere Radius
-		ers_r	= atof(argv[5]);         			// Sphere relative permittivity (real part)
-		ers_i	= atof(argv[6]);         			// Sphere relative permittivity (imag. part)
-		mrs_r	= atof(argv[7]);         			// Sphere relative permeabilitty (real part)
-		mrs_i	= atof(argv[8]);         			// Sphere relative permeabilitty (imag. part)		
-		R  		= atof(argv[9]);					// Points sphere radius
-		res  	= atof(argv[10]);					// Angular resolution [°]
-		fname 	= argv[11];							// File name
+		lam0	= atof(argv[2]);   				// Free space wavelength
+		n   	= atof(argv[3]);          		// Number of Mie coefficients
+		r		= atof(argv[4]);         		// Sphere Radius
+		ers_r	= atof(argv[5]);         		// Sphere relative permittivity (real part)
+		ers_i	= atof(argv[6]);         		// Sphere relative permittivity (imag. part)
+		mrs_r	= atof(argv[7]);         		// Sphere relative permeabilitty (real part)
+		mrs_i	= atof(argv[8]);         		// Sphere relative permeabilitty (imag. part)		
+		R  		= atof(argv[9]);				// Points sphere radius
+		res  	= atof(argv[10]);				// Angular resolution [°]
+		fname 	= argv[11];						// File name
 	}
 	else if (SEL == 3)
 	{
-		lam0	= atof(argv[2]);   					// Free space wavelength
-		n   	= atof(argv[3]);          			// Number of Mie coefficients
-		ers_r	= atof(argv[4]);         			// Sphere relative permittivity (real part)
-		ers_i	= atof(argv[5]);         			// Sphere relative permittivity (imag. part)
-		mrs_r	= atof(argv[6]);         			// Sphere relative permeabilitty (real part)
-		mrs_i	= atof(argv[7]);         			// Sphere relative permeabilitty (imag. part)
-		rstart  = atof(argv[8]);					// Smallest sphere radius [m]
-		rstop  	= atof(argv[9]);					// Largest sphere radius [m]
-		npts 	= atof(argv[10]);					// Number of steps between rstart and rstop
-		fname 	= argv[11];							// File name
+		lam0	= atof(argv[2]);   				// Free space wavelength
+		n   	= atof(argv[3]);          		// Number of Mie coefficients
+		ers_r	= atof(argv[4]);         		// Sphere relative permittivity (real part)
+		ers_i	= atof(argv[5]);         		// Sphere relative permittivity (imag. part)
+		mrs_r	= atof(argv[6]);         		// Sphere relative permeabilitty (real part)
+		mrs_i	= atof(argv[7]);         		// Sphere relative permeabilitty (imag. part)
+		rstart  = atof(argv[8]);				// Smallest sphere radius [m]
+		rstop  	= atof(argv[9]);				// Largest sphere radius [m]
+		npts 	= atof(argv[10]);				// Number of steps between rstart and rstop
+		fname 	= argv[11];						// File name
 	}
 	else if (SEL == 4)
 	{
-		r		= atof(argv[2]);   					// Radius [m]
-		n   	= atof(argv[3]);          			// number of Mie coefficients
-		ers_r	= atof(argv[4]);         			// Sphere relative permittivity (real part)
-		ers_i	= atof(argv[5]);         			// Sphere relative permittivity (imag. part)
-		mrs_r	= atof(argv[6]);         			// Sphere relative permeabilitty (real part)
-		mrs_i	= atof(argv[7]);         			// Sphere relative permeabilitty (imag. part)
-		wstart  = atof(argv[8]);					// Smallest free-space wavelength [m]
-		wstop  	= atof(argv[9]);					// Largest free-space wavelength [m]
-		npts 	= atof(argv[10]);					// Number of steps between wstart and wstop
-		fname 	= argv[11];							// File name
+		r		= atof(argv[2]);   				// Radius [m]
+		n   	= atof(argv[3]);          		// number of Mie coefficients
+		ers_r	= atof(argv[4]);         		// Sphere relative permittivity (real part)
+		ers_i	= atof(argv[5]);         		// Sphere relative permittivity (imag. part)
+		mrs_r	= atof(argv[6]);         		// Sphere relative permeabilitty (real part)
+		mrs_i	= atof(argv[7]);         		// Sphere relative permeabilitty (imag. part)
+		wstart  = atof(argv[8]);				// Smallest free-space wavelength [m]
+		wstop  	= atof(argv[9]);				// Largest free-space wavelength [m]
+		npts 	= atof(argv[10]);				// Number of steps between wstart and wstop
+		fname 	= argv[11];						// File name
 	}
 	else if (SEL == 5)
 	{
-		lam0	= atof(argv[2]);   					// Free space wavelength
-		n   	= atof(argv[3]);          			// Number of Mie coefficients
-		r		= atof(argv[4]);         			// Sphere Radius
-		ers_r	= atof(argv[5]);         			// Sphere relative permittivity (real part)
-		ers_i	= atof(argv[6]);         			// Sphere relative permittivity (imag. part)
-		mrs_r	= atof(argv[7]);         			// Sphere relative permeabilitty (real part)
-		mrs_i	= atof(argv[8]);         			// Sphere relative permeabilitty (imag. part)
-		R  		= atof(argv[9]);					// Points sphere radius
-		res  	= atof(argv[10]);					// Angular resolution [°]
-		plane  	= int(atof(argv[11]));				// Plane (1:xy, 2:xz, 3:yz) 
-		fname 	= argv[12];							// File name
+		lam0	= atof(argv[2]);   				// Free space wavelength
+		n   	= atof(argv[3]);          		// Number of Mie coefficients
+		r		= atof(argv[4]);         		// Sphere Radius
+		ers_r	= atof(argv[5]);         		// Sphere relative permittivity (real part)
+		ers_i	= atof(argv[6]);         		// Sphere relative permittivity (imag. part)
+		mrs_r	= atof(argv[7]);         		// Sphere relative permeabilitty (real part)
+		mrs_i	= atof(argv[8]);         		// Sphere relative permeabilitty (imag. part)
+		R  		= atof(argv[9]);				// Points sphere radius
+		res  	= atof(argv[10]);				// Angular resolution [°]
+		plane  	= int(atof(argv[11]));			// Plane (1:xy, 2:xz, 3:yz) 
+		fname 	= argv[12];						// File name
 	}
 	
 	ers = ers_r + j*ers_i;

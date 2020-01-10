@@ -256,77 +256,71 @@ if SEL == 1:
 	# For a 1D grid
 	if dim == 1:
 		if size(unique(x)) > 1:
-			Lx = size(unique(y))
-			Ly = size(unique(x))
 			xlab = 'x [m]'
 			xc = x
 			xmin = min(x)
 			xmax = max(x)
 		elif size(unique(y)) > 1:
-			Lx = size(unique(z))
-			Ly = size(unique(x))
 			xlab = 'y [m]'
 			xc = y
 			xmin = min(y)
 			xmax = max(y)
 		elif size(unique(z)) > 1:
-			Lx = size(unique(z))
-			Ly = size(unique(y))
 			xlab = 'z [m]'
 			xc = z
 			xmin = min(z)
 			xmax = max(z)
 
 
-			rot = 30
+		rot = 30
 
-			fig, axes = subplots(nrows=2, ncols=3)
-			fig.tight_layout() 
+		fig, axes = subplots(nrows=2, ncols=3)
+		fig.tight_layout() 
 
-			subplot(2,3,1)
-			plot(xc,abs(Ex0))
-			xlabel(xlab)
-			ylabel("abs(Ex)")
-			gca().xaxis.set_major_formatter(StrMethodFormatter('{x:,.2e}')) 
-			xticks(rotation=rot)
+		subplot(2,3,1)
+		plot(xc,abs(Ex0))
+		xlabel(xlab)
+		ylabel("abs(Ex)")
+		gca().xaxis.set_major_formatter(StrMethodFormatter('{x:,.2e}')) 
+		xticks(rotation=rot)
 
-			subplot(2,3,2)
-			plot(xc,abs(Ey0))
-			xlabel(xlab)
-			ylabel("abs(Ey)")
-			gca().xaxis.set_major_formatter(StrMethodFormatter('{x:,.2e}')) 
-			xticks(rotation=rot)
+		subplot(2,3,2)
+		plot(xc,abs(Ey0))
+		xlabel(xlab)
+		ylabel("abs(Ey)")
+		gca().xaxis.set_major_formatter(StrMethodFormatter('{x:,.2e}')) 
+		xticks(rotation=rot)
 
-			subplot(2,3,3)
-			plot(xc,abs(Ez0))
-			xlabel(xlab)
-			ylabel("abs(Ez)")
-			gca().xaxis.set_major_formatter(StrMethodFormatter('{x:,.2e}')) 
-			xticks(rotation=rot)
+		subplot(2,3,3)
+		plot(xc,abs(Ez0))
+		xlabel(xlab)
+		ylabel("abs(Ez)")
+		gca().xaxis.set_major_formatter(StrMethodFormatter('{x:,.2e}')) 
+		xticks(rotation=rot)
 
-			subplot(2,3,4)
-			plot(xc,abs(Hx0))
-			xlabel(xlab)
-			ylabel("abs(Hx)")
-			gca().xaxis.set_major_formatter(StrMethodFormatter('{x:,.2e}')) 
-			xticks(rotation=rot)
+		subplot(2,3,4)
+		plot(xc,abs(Hx0))
+		xlabel(xlab)
+		ylabel("abs(Hx)")
+		gca().xaxis.set_major_formatter(StrMethodFormatter('{x:,.2e}')) 
+		xticks(rotation=rot)
 
-			subplot(2,3,5)
-			plot(xc,abs(Hy0))
-			xlabel(xlab)
-			ylabel("abs(Ey)")
-			gca().xaxis.set_major_formatter(StrMethodFormatter('{x:,.2e}')) 
-			xticks(rotation=rot)
+		subplot(2,3,5)
+		plot(xc,abs(Hy0))
+		xlabel(xlab)
+		ylabel("abs(Ey)")
+		gca().xaxis.set_major_formatter(StrMethodFormatter('{x:,.2e}')) 
+		xticks(rotation=rot)
 
-			subplot(2,3,6)
-			plot(xc,abs(Hz0))
-			xlabel(xlab)
-			ylabel("abs(Ez)")
-			gca().xaxis.set_major_formatter(StrMethodFormatter('{x:,.2e}')) 
-			xticks(rotation=rot)
+		subplot(2,3,6)
+		plot(xc,abs(Hz0))
+		xlabel(xlab)
+		ylabel("abs(Ez)")
+		gca().xaxis.set_major_formatter(StrMethodFormatter('{x:,.2e}')) 
+		xticks(rotation=rot)
 
-			show()
-			sys.exit()
+		show()
+		sys.exit()
 
 
 	# For a 2D grid
